@@ -16,6 +16,6 @@ namespace PizzaServiceApp.PizzaObject
             pizzaID = this.pizzaID;
             pizzaName = this.pizzaName;
         }
-        readonly HashSet<string> standartPizzasList = File.ReadAllLines("standartPizzasList.txt").ToHashSet();
+        static readonly HashSet<string> standartPizzasHashSet = File.ReadAllLines("standartPizzasList.txt").ToHashSet();
     }
 }
