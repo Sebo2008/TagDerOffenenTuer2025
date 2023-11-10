@@ -7,7 +7,7 @@ namespace PizzaServiceApp
 
 
     {
-        public PizzaObject Pizza {  get; set; }
+
 
         public bool cheese { get; set; }
 
@@ -15,6 +15,13 @@ namespace PizzaServiceApp
         public Form1()
         {
             InitializeComponent();
+
+            foreach (var item in PizzaObject.PizzaObject.standartPizzasHashSet)
+            {
+                cmb_pizza.Items.Add(item);
+
+
+            }
         }
 
         private void order_Click(object sender, EventArgs e)
@@ -39,7 +46,9 @@ namespace PizzaServiceApp
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+
+
         }
     }
 }

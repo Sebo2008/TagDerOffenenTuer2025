@@ -30,11 +30,12 @@
         {
             order = new Button();
             splitter1 = new Splitter();
-            comboBox1 = new ComboBox();
-            trackBar1 = new TrackBar();
+            cmb_pizza = new ComboBox();
+            tb_Schaerfe = new TrackBar();
             checkBox1 = new CheckBox();
             extra_cheese = new CheckBox();
-            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
+            text_schaerfe = new Label();
+            ((System.ComponentModel.ISupportInitialize)tb_Schaerfe).BeginInit();
             SuspendLayout();
             // 
             // order
@@ -55,23 +56,23 @@
             splitter1.TabIndex = 1;
             splitter1.TabStop = false;
             // 
-            // comboBox1
+            // cmb_pizza
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(63, 57);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 2;
-            comboBox1.Tag = "";
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cmb_pizza.FormattingEnabled = true;
+            cmb_pizza.Location = new Point(63, 57);
+            cmb_pizza.Name = "cmb_pizza";
+            cmb_pizza.Size = new Size(121, 23);
+            cmb_pizza.TabIndex = 2;
+            cmb_pizza.Tag = "";
+            cmb_pizza.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // trackBar1
+            // tb_Schaerfe
             // 
-            trackBar1.Location = new Point(63, 293);
-            trackBar1.Name = "trackBar1";
-            trackBar1.Size = new Size(331, 45);
-            trackBar1.TabIndex = 6;
-            trackBar1.Scroll += trackBar1_Scroll;
+            tb_Schaerfe.Location = new Point(63, 190);
+            tb_Schaerfe.Name = "tb_Schaerfe";
+            tb_Schaerfe.Size = new Size(331, 45);
+            tb_Schaerfe.TabIndex = 6;
+            tb_Schaerfe.Scroll += trackBar1_Scroll;
             // 
             // checkBox1
             // 
@@ -95,20 +96,30 @@
             extra_cheese.UseVisualStyleBackColor = true;
             extra_cheese.CheckedChanged += extra_cheese_CheckedChanged;
             // 
+            // text_schaerfe
+            // 
+            text_schaerfe.AutoSize = true;
+            text_schaerfe.Location = new Point(63, 172);
+            text_schaerfe.Name = "text_schaerfe";
+            text_schaerfe.Size = new Size(55, 15);
+            text_schaerfe.TabIndex = 9;
+            text_schaerfe.Text = "Schaerfe:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(text_schaerfe);
             Controls.Add(extra_cheese);
             Controls.Add(checkBox1);
-            Controls.Add(trackBar1);
-            Controls.Add(comboBox1);
+            Controls.Add(tb_Schaerfe);
+            Controls.Add(cmb_pizza);
             Controls.Add(splitter1);
             Controls.Add(order);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tb_Schaerfe).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -117,9 +128,10 @@
 
         private Button order;
         private Splitter splitter1;
-        private ComboBox comboBox1;
-        private TrackBar trackBar1;
+        private ComboBox cmb_pizza;
+        private TrackBar tb_Schaerfe;
         private CheckBox checkBox1;
         private CheckBox extra_cheese;
+        private Label text_schaerfe;
     }
 }

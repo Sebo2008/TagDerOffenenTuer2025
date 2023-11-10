@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +17,10 @@ namespace PizzaServiceApp.PizzaObject
             pizzaID = this.pizzaID;
             pizzaName = this.pizzaName;
         }
-        static readonly HashSet<string> standartPizzasHashSet = File.ReadAllLines("standartPizzasList.txt").ToHashSet();
+
+       
+        internal static readonly HashSet<string> standartPizzasHashSet =
+            File.ReadAllLines("PizzaObject/standartPizzasList.txt").ToHashSet();
+
     }
 }
