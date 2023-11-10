@@ -31,10 +31,9 @@
             order = new Button();
             splitter1 = new Splitter();
             comboBox1 = new ComboBox();
-            button_schaerfe = new RadioButton();
-            extracheesebutton = new RadioButton();
-            pineapple_button = new RadioButton();
             trackBar1 = new TrackBar();
+            checkBox1 = new CheckBox();
+            extra_cheese = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             SuspendLayout();
             // 
@@ -64,40 +63,7 @@
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 2;
             comboBox1.Tag = "";
-            // 
-            // button_schaerfe
-            // 
-            button_schaerfe.AutoSize = true;
-            button_schaerfe.Location = new Point(63, 129);
-            button_schaerfe.Name = "button_schaerfe";
-            button_schaerfe.Size = new Size(97, 19);
-            button_schaerfe.TabIndex = 3;
-            button_schaerfe.TabStop = true;
-            button_schaerfe.Text = "Level of Spice";
-            button_schaerfe.UseVisualStyleBackColor = true;
-            button_schaerfe.CheckedChanged += button_schaerfe_CheckedChanged;
-            // 
-            // extracheesebutton
-            // 
-            extracheesebutton.AutoSize = true;
-            extracheesebutton.Location = new Point(63, 196);
-            extracheesebutton.Name = "extracheesebutton";
-            extracheesebutton.Size = new Size(90, 19);
-            extracheesebutton.TabIndex = 4;
-            extracheesebutton.TabStop = true;
-            extracheesebutton.Text = "extra cheese";
-            extracheesebutton.UseVisualStyleBackColor = true;
-            // 
-            // pineapple_button
-            // 
-            pineapple_button.AutoSize = true;
-            pineapple_button.Location = new Point(63, 154);
-            pineapple_button.Name = "pineapple_button";
-            pineapple_button.Size = new Size(106, 19);
-            pineapple_button.TabIndex = 5;
-            pineapple_button.TabStop = true;
-            pineapple_button.Text = "extra pineapple";
-            pineapple_button.UseVisualStyleBackColor = true;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // trackBar1
             // 
@@ -107,15 +73,36 @@
             trackBar1.TabIndex = 6;
             trackBar1.Scroll += trackBar1_Scroll;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(63, 144);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(83, 19);
+            checkBox1.TabIndex = 7;
+            checkBox1.Text = "checkBox1";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // extra_cheese
+            // 
+            extra_cheese.AutoSize = true;
+            extra_cheese.Location = new Point(63, 119);
+            extra_cheese.Name = "extra_cheese";
+            extra_cheese.Size = new Size(91, 19);
+            extra_cheese.TabIndex = 8;
+            extra_cheese.Text = "Extra cheese";
+            extra_cheese.UseVisualStyleBackColor = true;
+            extra_cheese.CheckedChanged += extra_cheese_CheckedChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(extra_cheese);
+            Controls.Add(checkBox1);
             Controls.Add(trackBar1);
-            Controls.Add(pineapple_button);
-            Controls.Add(extracheesebutton);
-            Controls.Add(button_schaerfe);
             Controls.Add(comboBox1);
             Controls.Add(splitter1);
             Controls.Add(order);
@@ -131,9 +118,8 @@
         private Button order;
         private Splitter splitter1;
         private ComboBox comboBox1;
-        private RadioButton button_schaerfe;
-        private RadioButton extracheesebutton;
-        private RadioButton pineapple_button;
         private TrackBar trackBar1;
+        private CheckBox checkBox1;
+        private CheckBox extra_cheese;
     }
 }
