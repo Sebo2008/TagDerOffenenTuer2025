@@ -7,7 +7,7 @@ namespace PizzaServiceApp
 
 
     {
-        public PizzaObject Pizza {  get; set; }
+        public PizzaObject.PizzaObject Pizza {  get; set; }
 
         public bool cheese { get; set; }
 
