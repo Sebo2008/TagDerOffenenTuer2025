@@ -10,6 +10,7 @@ namespace PizzaServiceApp
         public Form1()
         {
             InitializeComponent();
+            PizzaObject.PizzaObject.jsonTest();
         }
 
         private void order_Click(object sender, EventArgs e)
@@ -19,7 +20,7 @@ namespace PizzaServiceApp
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            if ()
+            
         }
 
         private void button_schaerfe_CheckedChanged(object sender, EventArgs e)
