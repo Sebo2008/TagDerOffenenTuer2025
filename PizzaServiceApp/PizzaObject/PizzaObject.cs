@@ -16,5 +16,6 @@ namespace PizzaServiceApp.PizzaObject
             pizzaID = this.pizzaID;
             pizzaName = this.pizzaName;
         }
+        List<PizzaObject> standartPizzas;
     }
 }
