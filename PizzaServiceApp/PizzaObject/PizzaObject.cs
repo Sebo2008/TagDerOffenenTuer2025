@@ -18,15 +18,12 @@ namespace PizzaServiceApp.PizzaObject
             this.pizzaID = pizzaID;
             this.pizzaName = pizzaName;
         }
-        static readonly HashSet<string> standartPizzasHashSet = File.ReadAllLines("standartPizzasList.txt").ToHashSet();
         public static void jsonTest()
         {
             File.WriteAllText("jsonTest.json", JsonSerializer.Serialize(new PizzaObject(0, "test")));
         }
 
        
-        internal static readonly HashSet<string> standartPizzasHashSet =
-            File.ReadAllLines("PizzaObject/standartPizzasList.txt").ToHashSet();
-
+        internal static readonly HashSet<string> standartPizzasHashSet = File.ReadAllLines("PizzaObject/standartPizzasList.txt").ToHashSet();
     }
 }
