@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -22,5 +23,10 @@ namespace PizzaServiceApp.PizzaObject
         {
             File.WriteAllText("jsonTest.json", JsonSerializer.Serialize(new PizzaObject(0, "test")));
         }
+
+       
+        internal static readonly HashSet<string> standartPizzasHashSet =
+            File.ReadAllLines("PizzaObject/standartPizzasList.txt").ToHashSet();
+
     }
 }
