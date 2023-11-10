@@ -28,12 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            order = new Button();
+            splitter1 = new Splitter();
+            comboBox1 = new ComboBox();
+            radioButton1 = new RadioButton();
+            extracheesebutton = new RadioButton();
+            SuspendLayout();
+            // 
+            // order
+            // 
+            order.Location = new Point(578, 375);
+            order.Name = "order";
+            order.Size = new Size(139, 49);
+            order.TabIndex = 0;
+            order.Text = "Order";
+            order.UseVisualStyleBackColor = true;
+            // 
+            // splitter1
+            // 
+            splitter1.Location = new Point(0, 0);
+            splitter1.Name = "splitter1";
+            splitter1.Size = new Size(511, 450);
+            splitter1.TabIndex = 1;
+            splitter1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(63, 57);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 2;
+            comboBox1.Tag = "";
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(63, 129);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(94, 19);
+            radioButton1.TabIndex = 3;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "radioButton1";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // extracheesebutton
+            // 
+            extracheesebutton.AutoSize = true;
+            extracheesebutton.Location = new Point(63, 196);
+            extracheesebutton.Name = "extracheesebutton";
+            extracheesebutton.Size = new Size(90, 19);
+            extracheesebutton.TabIndex = 4;
+            extracheesebutton.TabStop = true;
+            extracheesebutton.Text = "extra cheese";
+            extracheesebutton.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(extracheesebutton);
+            Controls.Add(radioButton1);
+            Controls.Add(comboBox1);
+            Controls.Add(splitter1);
+            Controls.Add(order);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button order;
+        private Splitter splitter1;
+        private ComboBox comboBox1;
+        private RadioButton radioButton1;
+        private RadioButton extracheesebutton;
     }
 }
