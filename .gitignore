@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/PizzaServiceApp/.vs/PizzaServiceApp
+/PizzaServiceApp/obj
+/PizzaServiceApp/PizzaServiceApp.csproj.user
