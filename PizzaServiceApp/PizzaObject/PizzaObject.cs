@@ -19,6 +19,7 @@ namespace PizzaServiceApp.PizzaObject
         PizzaObject(int pizzaID, int levelOfSpice, string pizzaName, double price, List<IngredientObject> ingredients)
         {
             this.PizzaID = pizzaID;
+            this.LevelOfSpice = levelOfSpice;
             this.PizzaName = pizzaName;
             this.Price = price;
             this.Ingredients = ingredients;

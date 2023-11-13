@@ -16,6 +16,9 @@ namespace PizzaServiceApp
         public Form1()
         {
             InitializeComponent();
+            IngredientObject.IngredientsJson();
+
+            PizzaObject.PizzaObject.PizzasJson();
 
             foreach (var item in PizzaObject.PizzaObject.standartPizzasHashSet)
             {
@@ -23,8 +26,6 @@ namespace PizzaServiceApp
 
 
             }
-            PizzaObject.IngredientObject.IngredientsJson();
-            PizzaObject.PizzaObject.PizzasJson();
         }
 
         private void order_Click(object sender, EventArgs e)
