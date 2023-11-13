@@ -15,7 +15,7 @@ namespace PizzaServiceApp.PizzaObject
         public int LevelOfSpice { get; set; }
         public string PizzaName { get; set; }
         public double Price { get; set; }
-        public List<IngredientObject> Ingredients { get; set; }
+        public List<IngredientObject> PizzaIngredients { get; set; }
 
         PizzaObject(int pizzaID, int levelOfSpice, string pizzaName, double price, List<IngredientObject> ingredients)
         {
@@ -23,7 +23,7 @@ namespace PizzaServiceApp.PizzaObject
             this.LevelOfSpice = levelOfSpice;
             this.PizzaName = pizzaName;
             this.Price = price;
-            this.Ingredients = ingredients;
+            this.PizzaIngredients = ingredients;
         }
         public static void PizzasJson()
         {
@@ -34,7 +34,10 @@ namespace PizzaServiceApp.PizzaObject
         internal static readonly HashSet<string> standartPizzasHashSet = File.ReadAllLines("PizzaObject/standartPizzasList.txt").ToHashSet();
         public static void GetPizzaValuesFromInterface(string name, int spice, bool extraCheese, bool extraDip)
         {
-            foreach (IngredientObject ingredient in ) { }
+            foreach (IngredientObject ingredient in IngredientObject.StandartIngredients)
+            {
+                
+            }
         }
     }
 }

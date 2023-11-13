@@ -10,20 +10,22 @@ namespace PizzaServiceApp.PizzaObject
 {
     public class IngredientObject
     {
-        public int ingredientID;
-        public string ingredientName;
-        public bool isOnPizza;
+        public int ingredientID { get; set; }
+        public string ingredientName { get; set; }
+        public bool isOnPizza { get; set; }
         IngredientObject(int id, string name, bool isOnPizza)
         {
             this.ingredientID = id;
             this.ingredientName = name;
             this.isOnPizza = isOnPizza;
         }
-        readonly List<IngredientObject> ingredients = new();
+
+        public static readonly List<IngredientObject> StandartIngredients = new();
         public static void IngredientsJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
-            File.WriteAllText("Ingredients.json", JsonSerializer.Serialize(new IngredientObject(0, "empty", false)));
+            var testIngredient = new IngredientObject(0, "empty", false);
+            File.WriteAllText("Ingredients.json", JsonSerializer.Serialize(testIngredient, options));
         }
     }
 }
