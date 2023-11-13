@@ -22,7 +22,7 @@ namespace PizzaServiceApp.PizzaObject
             this.Price = price;
             this.Ingredients = ingredients;
         }
-        public static void PizzsJson()
+        public static void PizzasJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
             List<IngredientObject> ingredients = new List<IngredientObject>();
