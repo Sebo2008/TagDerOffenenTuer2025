@@ -28,8 +28,7 @@ namespace PizzaServiceApp.PizzaObject
         public static void PizzasJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
-            List<IngredientObject> ingredients = new List<IngredientObject>();
-            File.WriteAllText("StandartPizzas.json", JsonSerializer.Serialize(new PizzaObject(0, 0, "empty", 0.00, ingredients), options));
+            File.WriteAllText("StandartPizzas.json", JsonSerializer.Serialize(new PizzaObject(0, 0, "empty", 0.00, IngredientObject.StandartIngredients), options));
         }
         internal static readonly HashSet<string> standartPizzasHashSet = File.ReadAllLines("PizzaObject/standartPizzasList.txt").ToHashSet();
         public static void GetPizzaValuesFromInterface(string name, int spice, bool extraCheese, bool extraDip)

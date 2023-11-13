@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -28,8 +29,12 @@ namespace PizzaServiceApp.PizzaObject
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
             StandartIngredients = JsonConvert.DeserializeObject<List<IngredientObject>>(File.ReadAllText("Ingredients.json"));
-            var testIngredient = new IngredientObject(0, "empty", false);
-            IngredientObject.StandartIngredients?.Add(testIngredient);
+            foreach (var ingredient in IngredientObject.StandartIngredients.Select((value, i) => new { i, value }))
+            {
+                var value = ingredient.value;
+                var index = ingredient.i;
+                ingredient.value.ingredientID = index;
+            }
             File.WriteAllText("Ingredients.json", System.Text.Json.JsonSerializer.Serialize(IngredientObject.StandartIngredients, options));
         }
     }
