@@ -10,9 +10,9 @@ namespace PizzaServiceApp.PizzaObject
 {
     public class IngredientObject
     {
-        int ingredientID;
-        string ingredientName;
-        bool isOnPizza;
+        public int ingredientID;
+        public string ingredientName;
+        public bool isOnPizza;
 
         IngredientObject(int id, string name, bool isOnPizza)
         {
