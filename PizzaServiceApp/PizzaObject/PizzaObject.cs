@@ -11,11 +11,12 @@ namespace PizzaServiceApp.PizzaObject
     public class PizzaObject
     {
         public int PizzaID { get; set; }
+        public int LevelOfSpice { get; set; }
         public string PizzaName { get; set; }
         public double Price { get; set; }
         public List<IngredientObject> Ingredients { get; set; }
 
-        PizzaObject(int pizzaID, string pizzaName, double price, List<IngredientObject> ingredients)
+        PizzaObject(int pizzaID, int levelOfSpice, string pizzaName, double price, List<IngredientObject> ingredients)
         {
             this.PizzaID = pizzaID;
             this.PizzaName = pizzaName;
@@ -26,7 +27,7 @@ namespace PizzaServiceApp.PizzaObject
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
             List<IngredientObject> ingredients = new List<IngredientObject>();
-            File.WriteAllText("StandartPizzas.json", JsonSerializer.Serialize(new PizzaObject(0, "empty", 0.00, ingredients), options));
+            File.WriteAllText("StandartPizzas.json", JsonSerializer.Serialize(new PizzaObject(0, 0, "empty", 0.00, ingredients), options));
         }
 
        

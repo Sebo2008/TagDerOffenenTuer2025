@@ -12,7 +12,7 @@ namespace PizzaServiceApp.PizzaObject
     {
         int ingredientID;
         string ingredientName;
-        bool isOnPizza = false;
+        bool isOnPizza;
 
         IngredientObject(int id, string name, bool isOnPizza)
         {
