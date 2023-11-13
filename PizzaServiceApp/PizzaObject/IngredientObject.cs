@@ -13,17 +13,17 @@ namespace PizzaServiceApp.PizzaObject
         public int ingredientID;
         public string ingredientName;
         public bool isOnPizza;
-
         IngredientObject(int id, string name, bool isOnPizza)
         {
             this.ingredientID = id;
             this.ingredientName = name;
             this.isOnPizza = isOnPizza;
         }
+        readonly List<IngredientObject> ingredients = new();
         public static void IngredientsJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
-            File.WriteAllText("Ingredients.json", JsonSerializer.Serialize(new IngredientObject(0, "empty", false), options));
+            File.WriteAllText("Ingredients.json", JsonSerializer.Serialize(new IngredientObject(0, "empty", false)));
         }
     }
 }

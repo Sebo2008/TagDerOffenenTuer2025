@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
+using PizzaServiceApp.PizzaObject;
 using System.Threading.Tasks;
 
 namespace PizzaServiceApp.PizzaObject
@@ -33,7 +34,7 @@ namespace PizzaServiceApp.PizzaObject
         internal static readonly HashSet<string> standartPizzasHashSet = File.ReadAllLines("PizzaObject/standartPizzasList.txt").ToHashSet();
         public static void GetPizzaValuesFromInterface(string name, int spice, bool extraCheese, bool extraDip)
         {
-
+            foreach (IngredientObject ingredient in ) { }
         }
     }
 }
