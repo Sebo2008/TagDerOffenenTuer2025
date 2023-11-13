@@ -7,7 +7,8 @@ namespace PizzaServiceApp
 
 
     {
-        public PizzaObject.PizzaObject Pizza {  get; set; }
+        public PizzaObject.PizzaObject Pizza { get; set; }
+        public PizzaObject.PizzaObject Pizzaadded { get; set; }
 
 
         public bool cheese { get; set; }
@@ -50,6 +51,19 @@ namespace PizzaServiceApp
         {
 
 
+
+        }
+
+        private void add_pizza_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"You added {cmb_pizza.SelectedItem} with {extra_cheese.Text} {extra_Dip.Text}. Level of Spicy: {tb_Schaerfe.Value} to your ordering list");
+            
+        }
+
+
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
 
         }
     }
