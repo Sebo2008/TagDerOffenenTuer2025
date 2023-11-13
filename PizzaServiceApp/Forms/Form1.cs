@@ -9,7 +9,7 @@ namespace PizzaServiceApp
     {
         public PizzaObject.PizzaObject Pizza { get; set; }
         public PizzaObject.PizzaObject Pizzaadded { get; set; }
-        public List<string> list { get; set; }
+        public List<string> list { get; set; } = new();
 
         public bool cheese { get; set; }
 
@@ -33,7 +33,7 @@ namespace PizzaServiceApp
 
         private void order_Click(object sender, EventArgs e)
         {
-
+            this.ShowDialog();
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace PizzaServiceApp
 
 
         }
-        
+
         private void add_pizza_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"You added {cmb_pizza.SelectedItem} with {extra_cheese.Text} {extra_Dip.Text}. Level of Spicy: {tb_Schaerfe.Value} to your ordering list");
@@ -68,6 +68,8 @@ namespace PizzaServiceApp
             {
                 listBox1.Items.Add(item);
             }
+
+            this.list.Clear();
         }
 
 
