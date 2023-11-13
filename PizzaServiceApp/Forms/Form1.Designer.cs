@@ -28,13 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            TreeNode treeNode1 = new TreeNode("Node1");
+            TreeNode treeNode2 = new TreeNode("Node2");
+            TreeNode treeNode3 = new TreeNode("Node0", new TreeNode[] { treeNode1, treeNode2 });
+            TreeNode treeNode4 = new TreeNode("Node4");
+            TreeNode treeNode5 = new TreeNode("Node5");
+            TreeNode treeNode6 = new TreeNode("Node3", new TreeNode[] { treeNode4, treeNode5 });
             order = new Button();
             splitter1 = new Splitter();
             cmb_pizza = new ComboBox();
             tb_Schaerfe = new TrackBar();
-            checkBox1 = new CheckBox();
+            extra_Dip = new CheckBox();
             extra_cheese = new CheckBox();
-            text_schaerfe = new Label();
+            text_spicy = new Label();
+            add_pizza = new Button();
+            treeView1 = new TreeView();
             ((System.ComponentModel.ISupportInitialize)tb_Schaerfe).BeginInit();
             SuspendLayout();
             // 
@@ -69,21 +77,22 @@
             // tb_Schaerfe
             // 
             tb_Schaerfe.Location = new Point(63, 190);
+            tb_Schaerfe.Maximum = 5;
             tb_Schaerfe.Name = "tb_Schaerfe";
-            tb_Schaerfe.Size = new Size(331, 45);
+            tb_Schaerfe.Size = new Size(314, 45);
             tb_Schaerfe.TabIndex = 6;
             tb_Schaerfe.Scroll += trackBar1_Scroll;
             // 
-            // checkBox1
+            // extra_Dip
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(63, 144);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(83, 19);
-            checkBox1.TabIndex = 7;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            extra_Dip.AutoSize = true;
+            extra_Dip.Location = new Point(63, 144);
+            extra_Dip.Name = "extra_Dip";
+            extra_Dip.Size = new Size(73, 19);
+            extra_Dip.TabIndex = 7;
+            extra_Dip.Text = "Extra Dip";
+            extra_Dip.UseVisualStyleBackColor = true;
+            extra_Dip.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // extra_cheese
             // 
@@ -96,23 +105,56 @@
             extra_cheese.UseVisualStyleBackColor = true;
             extra_cheese.CheckedChanged += extra_cheese_CheckedChanged;
             // 
-            // text_schaerfe
+            // text_spicy
             // 
-            text_schaerfe.AutoSize = true;
-            text_schaerfe.Location = new Point(63, 172);
-            text_schaerfe.Name = "text_schaerfe";
-            text_schaerfe.Size = new Size(55, 15);
-            text_schaerfe.TabIndex = 9;
-            text_schaerfe.Text = "Schaerfe:";
+            text_spicy.AutoSize = true;
+            text_spicy.Location = new Point(63, 172);
+            text_spicy.Name = "text_spicy";
+            text_spicy.Size = new Size(82, 15);
+            text_spicy.TabIndex = 9;
+            text_spicy.Text = "Level of Spicy:";
+            // 
+            // add_pizza
+            // 
+            add_pizza.Location = new Point(109, 347);
+            add_pizza.Name = "add_pizza";
+            add_pizza.Size = new Size(75, 23);
+            add_pizza.TabIndex = 10;
+            add_pizza.Text = "Add ";
+            add_pizza.UseVisualStyleBackColor = true;
+            add_pizza.Click += add_pizza_Click;
+            // 
+            // treeView1
+            // 
+            treeView1.Location = new Point(602, 133);
+            treeView1.Name = "treeView1";
+            treeNode1.Name = "Node1";
+            treeNode1.Text = "Node1";
+            treeNode2.Name = "Node2";
+            treeNode2.Text = "Node2";
+            treeNode3.Name = "Node0";
+            treeNode3.Text = "Node0";
+            treeNode4.Name = "Node4";
+            treeNode4.Text = "Node4";
+            treeNode5.Name = "Node5";
+            treeNode5.Text = "Node5";
+            treeNode6.Name = "Node3";
+            treeNode6.Text = "Node3";
+            treeView1.Nodes.AddRange(new TreeNode[] { treeNode3, treeNode6 });
+            treeView1.Size = new Size(121, 97);
+            treeView1.TabIndex = 11;
+            treeView1.AfterSelect += treeView1_AfterSelect;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(text_schaerfe);
+            Controls.Add(treeView1);
+            Controls.Add(add_pizza);
+            Controls.Add(text_spicy);
             Controls.Add(extra_cheese);
-            Controls.Add(checkBox1);
+            Controls.Add(extra_Dip);
             Controls.Add(tb_Schaerfe);
             Controls.Add(cmb_pizza);
             Controls.Add(splitter1);
@@ -130,8 +172,10 @@
         private Splitter splitter1;
         private ComboBox cmb_pizza;
         private TrackBar tb_Schaerfe;
-        private CheckBox checkBox1;
+        private CheckBox extra_Dip;
         private CheckBox extra_cheese;
-        private Label text_schaerfe;
+        private Label text_spicy;
+        private Button add_pizza;
+        private TreeView treeView1;
     }
 }
