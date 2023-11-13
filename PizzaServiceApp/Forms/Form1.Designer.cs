@@ -37,6 +37,7 @@
             text_spicy = new Label();
             add_pizza = new Button();
             listBox1 = new ListBox();
+            deinebestellung = new Label();
             ((System.ComponentModel.ISupportInitialize)tb_Schaerfe).BeginInit();
             SuspendLayout();
             // 
@@ -127,11 +128,21 @@
             listBox1.Size = new Size(129, 109);
             listBox1.TabIndex = 11;
             // 
+            // deinebestellung
+            // 
+            deinebestellung.AutoSize = true;
+            deinebestellung.Location = new Point(578, 80);
+            deinebestellung.Name = "deinebestellung";
+            deinebestellung.Size = new Size(88, 15);
+            deinebestellung.TabIndex = 12;
+            deinebestellung.Text = "Selected Pizzas:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(deinebestellung);
             Controls.Add(listBox1);
             Controls.Add(add_pizza);
             Controls.Add(text_spicy);
@@ -159,5 +170,6 @@
         private Label text_spicy;
         private Button add_pizza;
         private ListBox listBox1;
+        private Label deinebestellung;
     }
 }

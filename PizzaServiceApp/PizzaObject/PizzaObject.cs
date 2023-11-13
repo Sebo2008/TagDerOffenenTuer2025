@@ -36,7 +36,7 @@ namespace PizzaServiceApp.PizzaObject
         {
             foreach (IngredientObject ingredient in IngredientObject.StandartIngredients)
             {
-                
+
             }
         }
     }
