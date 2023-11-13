@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -19,13 +22,15 @@ namespace PizzaServiceApp.PizzaObject
             this.ingredientName = name;
             this.isOnPizza = isOnPizza;
         }
-
-        public static readonly List<IngredientObject> StandartIngredients = new();
+        IngredientObject() { }
+        public static List<IngredientObject> ?StandartIngredients = new();
         public static void IngredientsJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
+            StandartIngredients = JsonConvert.DeserializeObject<List<IngredientObject>>(File.ReadAllText("Ingredients.json"));
             var testIngredient = new IngredientObject(0, "empty", false);
-            File.WriteAllText("Ingredients.json", JsonSerializer.Serialize(testIngredient, options));
+            IngredientObject.StandartIngredients?.Add(testIngredient);
+            File.WriteAllText("Ingredients.json", System.Text.Json.JsonSerializer.Serialize(IngredientObject.StandartIngredients, options));
         }
     }
 }
