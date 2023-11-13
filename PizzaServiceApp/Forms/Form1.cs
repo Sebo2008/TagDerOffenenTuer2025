@@ -73,7 +73,8 @@ namespace PizzaServiceApp
             }
 
             MessageBox.Show($"You added {cmb_pizza.SelectedItem} with {extrasString.Trim()}. Level of Spicy: {tb_Schaerfe.Value} to your ordering list");
-            PizzaObject.PizzaObject.GetPizzaValuesFromInterface(cmb_pizza.SelectedItem.ToString()!, tb_Schaerfe.Value, extrasString);
+            
+            PizzaObject.Order.AddPizzaToOrder(checkedListBox1.CheckedItems.OfType<string>().ToList());
 
             this.list.Add((string)cmb_pizza.SelectedItem);
             foreach (var item in list)
