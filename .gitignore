@@ -7,3 +7,4 @@
 /PizzaServiceApp/obj
 /PizzaServiceApp/PizzaServiceApp.csproj.user
 /PizzaServiceApp/bin/Debug/net6.0-windows
+*.bin
