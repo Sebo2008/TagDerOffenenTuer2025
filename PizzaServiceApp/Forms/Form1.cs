@@ -23,7 +23,8 @@ namespace PizzaServiceApp
 
 
             }
-            PizzaObject.PizzaObject.jsonTest();
+            PizzaObject.IngredientObject.IngredientsJson();
+            PizzaObject.PizzaObject.PizzasJson();
         }
 
         private void order_Click(object sender, EventArgs e)
