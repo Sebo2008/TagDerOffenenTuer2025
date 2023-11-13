@@ -32,12 +32,11 @@
             splitter1 = new Splitter();
             cmb_pizza = new ComboBox();
             tb_Schaerfe = new TrackBar();
-            extra_Dip = new CheckBox();
-            extra_cheese = new CheckBox();
             text_spicy = new Label();
             add_pizza = new Button();
             listBox1 = new ListBox();
             deinebestellung = new Label();
+            checkedListBox1 = new CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)tb_Schaerfe).BeginInit();
             SuspendLayout();
             // 
@@ -71,39 +70,17 @@
             // 
             // tb_Schaerfe
             // 
-            tb_Schaerfe.Location = new Point(63, 190);
+            tb_Schaerfe.Location = new Point(63, 249);
             tb_Schaerfe.Maximum = 5;
             tb_Schaerfe.Name = "tb_Schaerfe";
             tb_Schaerfe.Size = new Size(314, 45);
             tb_Schaerfe.TabIndex = 6;
             tb_Schaerfe.Scroll += trackBar1_Scroll;
             // 
-            // extra_Dip
-            // 
-            extra_Dip.AutoSize = true;
-            extra_Dip.Location = new Point(63, 144);
-            extra_Dip.Name = "extra_Dip";
-            extra_Dip.Size = new Size(73, 19);
-            extra_Dip.TabIndex = 7;
-            extra_Dip.Text = "Extra Dip";
-            extra_Dip.UseVisualStyleBackColor = true;
-            extra_Dip.CheckedChanged += checkBox1_CheckedChanged;
-            // 
-            // extra_cheese
-            // 
-            extra_cheese.AutoSize = true;
-            extra_cheese.Location = new Point(63, 119);
-            extra_cheese.Name = "extra_cheese";
-            extra_cheese.Size = new Size(91, 19);
-            extra_cheese.TabIndex = 8;
-            extra_cheese.Text = "Extra cheese";
-            extra_cheese.UseVisualStyleBackColor = true;
-            extra_cheese.CheckedChanged += extra_cheese_CheckedChanged;
-            // 
             // text_spicy
             // 
             text_spicy.AutoSize = true;
-            text_spicy.Location = new Point(63, 172);
+            text_spicy.Location = new Point(63, 218);
             text_spicy.Name = "text_spicy";
             text_spicy.Size = new Size(82, 15);
             text_spicy.TabIndex = 9;
@@ -137,17 +114,25 @@
             deinebestellung.TabIndex = 12;
             deinebestellung.Text = "Selected Pizzas:";
             // 
+            // checkedListBox1
+            // 
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Location = new Point(63, 121);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(195, 94);
+            checkedListBox1.TabIndex = 13;
+            checkedListBox1.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(checkedListBox1);
             Controls.Add(deinebestellung);
             Controls.Add(listBox1);
             Controls.Add(add_pizza);
             Controls.Add(text_spicy);
-            Controls.Add(extra_cheese);
-            Controls.Add(extra_Dip);
             Controls.Add(tb_Schaerfe);
             Controls.Add(cmb_pizza);
             Controls.Add(splitter1);
@@ -165,11 +150,10 @@
         private Splitter splitter1;
         private ComboBox cmb_pizza;
         private TrackBar tb_Schaerfe;
-        private CheckBox extra_Dip;
-        private CheckBox extra_cheese;
         private Label text_spicy;
         private Button add_pizza;
         private ListBox listBox1;
         private Label deinebestellung;
+        private CheckedListBox checkedListBox1;
     }
 }
