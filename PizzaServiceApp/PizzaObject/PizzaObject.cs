@@ -12,19 +12,21 @@ namespace PizzaServiceApp.PizzaObject
     {
         public int PizzaID { get; set; }
         public string PizzaName { get; set; }
-        public decimal Price { get; set; }
+        public double Price { get; set; }
         public List<IngredientObject> Ingredients { get; set; }
 
-        PizzaObject(int pizzaID, string pizzaName, decimal price, List<IngredientObject> ingredients)
+        PizzaObject(int pizzaID, string pizzaName, double price, List<IngredientObject> ingredients)
         {
             this.PizzaID = pizzaID;
             this.PizzaName = pizzaName;
             this.Price = price;
             this.Ingredients = ingredients;
         }
-        public static void jsonTest()
+        public static void PizzsJson()
         {
-            File.WriteAllText("jsonTest.json", JsonSerializer.Serialize(new PizzaObject()));
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            List<IngredientObject> ingredients = new List<IngredientObject>();
+            File.WriteAllText("StandartPizzas.json", JsonSerializer.Serialize(new PizzaObject(0, "empty", 0.00, ingredients), options));
         }
 
        
