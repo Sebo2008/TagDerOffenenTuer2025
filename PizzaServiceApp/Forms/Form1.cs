@@ -28,6 +28,11 @@ namespace PizzaServiceApp
 
             }
 
+            foreach (var item in IngredientObject.StandartIngredients)
+            {
+                checkedListBox1.Items.Add(item.ingredientName);
+            }
+
             cmb_pizza.SelectedIndex = 0;
         }
 
@@ -48,7 +53,7 @@ namespace PizzaServiceApp
 
         private void extra_cheese_CheckedChanged(object sender, EventArgs e)
         {
-            if (extra_cheese.Checked) ;
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -60,8 +65,15 @@ namespace PizzaServiceApp
 
         private void add_pizza_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"You added {cmb_pizza.SelectedItem} with {extra_cheese.Text} {extra_Dip.Text}. Level of Spicy: {tb_Schaerfe.Value} to your ordering list");
-            PizzaObject.PizzaObject.GetPizzaValuesFromInterface(cmb_pizza.SelectedItem.ToString()!, tb_Schaerfe.Value, extra_cheese.Checked, extra_Dip.Checked);
+            string extrasString = string.Empty;
+
+            foreach (var item in checkedListBox1.CheckedItems)
+            {
+                extrasString += $"{item} ";
+            }
+
+            MessageBox.Show($"You added {cmb_pizza.SelectedItem} with {extrasString.Trim()}. Level of Spicy: {tb_Schaerfe.Value} to your ordering list");
+            PizzaObject.PizzaObject.GetPizzaValuesFromInterface(cmb_pizza.SelectedItem.ToString()!, tb_Schaerfe.Value, extrasString);
 
             this.list.Add((string)cmb_pizza.SelectedItem);
             foreach (var item in list)
@@ -76,6 +88,18 @@ namespace PizzaServiceApp
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+            var test = checkedListBox1.SelectedItems;
 
         }
     }
