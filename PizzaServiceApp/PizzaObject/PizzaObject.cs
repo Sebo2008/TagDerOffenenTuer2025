@@ -6,6 +6,7 @@ using System.Text;
 using System.Text.Json;
 using PizzaServiceApp.PizzaObject;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace PizzaServiceApp.PizzaObject
 {
@@ -31,12 +32,5 @@ namespace PizzaServiceApp.PizzaObject
             File.WriteAllText("StandartPizzas.json", JsonSerializer.Serialize(new PizzaObject(0, 0, "empty", 0.00, IngredientObject.StandartIngredients), options));
         }
         internal static readonly HashSet<string> standartPizzasHashSet = File.ReadAllLines("PizzaObject/standartPizzasList.txt").ToHashSet();
-        public static void GetPizzaValuesFromInterface(string name, int spice, bool extraCheese, bool extraDip)
-        {
-            foreach (IngredientObject ingredient in IngredientObject.StandartIngredients)
-            {
-
-            }
-        }
     }
 }
