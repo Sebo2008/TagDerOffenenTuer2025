@@ -10,17 +10,21 @@ namespace PizzaServiceApp.PizzaObject
 {
     public class PizzaObject
     {
-        public int pizzaID { get; set; }
-        public string pizzaName { get; set; }
+        public int PizzaID { get; set; }
+        public string PizzaName { get; set; }
+        public decimal Price { get; set; }
+        public List<IngredientObject> Ingredients { get; set; }
 
-        PizzaObject(int pizzaID, string pizzaName)
+        PizzaObject(int pizzaID, string pizzaName, decimal price, List<IngredientObject> ingredients)
         {
-            this.pizzaID = pizzaID;
-            this.pizzaName = pizzaName;
+            this.PizzaID = pizzaID;
+            this.PizzaName = pizzaName;
+            this.Price = price;
+            this.Ingredients = ingredients;
         }
         public static void jsonTest()
         {
-            File.WriteAllText("jsonTest.json", JsonSerializer.Serialize(new PizzaObject(0, "test")));
+            File.WriteAllText("jsonTest.json", JsonSerializer.Serialize(new PizzaObject()));
         }
 
        

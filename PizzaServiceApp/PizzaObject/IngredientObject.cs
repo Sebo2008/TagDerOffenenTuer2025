@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PizzaServiceApp.PizzaObject
 {
-    internal class IngredientObject
+    public class IngredientObject
     {
         int ingredientID;
         string ingredientName;
