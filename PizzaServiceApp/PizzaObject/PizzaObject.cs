@@ -30,8 +30,10 @@ namespace PizzaServiceApp.PizzaObject
             List<IngredientObject> ingredients = new List<IngredientObject>();
             File.WriteAllText("StandartPizzas.json", JsonSerializer.Serialize(new PizzaObject(0, 0, "empty", 0.00, ingredients), options));
         }
-
-       
         internal static readonly HashSet<string> standartPizzasHashSet = File.ReadAllLines("PizzaObject/standartPizzasList.txt").ToHashSet();
+        public static void GetPizzaValuesFromInterface(string name, int spice, bool extraCheese, bool extraDip)
+        {
+
+        }
     }
 }
