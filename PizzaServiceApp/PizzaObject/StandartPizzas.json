@@ -2,99 +2,364 @@
   {
     "PizzaID": 0,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Kebap Pizza",
+    "Price": 7.00,
+    "PizzaIngredients": [
+      {
+        "ingredientID": 16,
+        "ingredientName": "Kebab"
+      }
+    ]
   },
   {
     "PizzaID": 1,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Kebab Pizza Hollandaise",
+    "Price": 8.00,
+    "PizzaIngredients": [
+      {
+        "ingredientID": 16,
+        "ingredientName": "Kebab"
+      },
+
+      {
+        "ingredientID": 13,
+        "ingredientName": "Hollandaise"
+      }
+    ]
   },
   {
     "PizzaID": 2,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Chili Cheese Pizza",
+    "Price": 8.00,
+    "PizzaIngredients": [
+      {
+        "ingredientID": 16,
+        "ingredientName": "Kebab"
+      },
+
+      {
+        "ingredientID": 1,
+        "ingredientName": "Cheese"
+      },
+      {
+        "ingredientID": 32,
+        "ingredientName": "Chili"
+      } ]
   },
   {
     "PizzaID": 3,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Nils Pizza",
+    "Price": 8.00,
+    "PizzaIngredients": [
+      {
+        "ingredientID": 32,
+        "ingredientName": "Chili"
+      },
+      {
+        "ingredientID": 13,
+        "ingredientName": "Hollandaise"
+      },
+      {
+        "ingredientID": 16,
+        "ingredientName": "Kebab"
+      },
+      {
+        "ingredientID": 17,
+        "ingredientName": "Corn"
+      }
+    ]
   },
   {
     "PizzaID": 4,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Muka Pizza",
+    "Price": 10.00,
+    "PizzaIngredients": [
+
+      {
+        "ingredientID": 17,
+        "ingredientName": "Corn"
+      },
+      {
+        "ingredientID": 20,
+        "ingredientName": "Oregano"
+      },
+      {
+        "ingredientID": 16,
+        "ingredientName": "Kebab"
+      },
+      {
+        "ingredientID": 18,
+        "ingredientName": "Mozarella"
+      },
+      {
+        "ingredientID": 31,
+        "ingredientName": "Buffalo mozzarella"
+      },
+      {
+        "ingredientID": 14,
+        "ingredientName": "Champignons"
+      }
+    ]
   },
   {
     "PizzaID": 5,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Pizza Premium",
+    "Price": 26.00,
+    "PizzaIngredients": [
+
+      {
+        "ingredientID": 27,
+        "ingredientName": "Bolognese sauce"
+      },
+      {
+        "ingredientID": 28,
+        "ingredientName": "Parsley"
+      },
+      {
+        "ingredientID": 29,
+        "ingredientName": "Parma ham"
+      },
+      {
+        "ingredientID": 30,
+        "ingredientName": "Mussels"
+      },
+      {
+        "ingredientID": 31,
+        "ingredientName": "Buffalo mozzarella"
+      },
+      {
+        "ingredientID": 32,
+        "ingredientName": "Chili"
+      },
+      {
+        "ingredientID": 13,
+        "ingredientName": "Hollandaise"
+      },
+      {
+        "ingredientID": 14,
+        "ingredientName": "Champignons"
+      },
+      {
+        "ingredientID": 15,
+        "ingredientName": "Dip"
+      },
+      {
+        "ingredientID": 16,
+        "ingredientName": "Kebab"
+      },
+      {
+        "ingredientID": 17,
+        "ingredientName": "Corn"
+      },
+      {
+        "ingredientID": 18,
+        "ingredientName": "Mozarella"
+      },
+      {
+        "ingredientID": 19,
+        "ingredientName": "Spinach"
+      },
+      {
+        "ingredientID": 20,
+        "ingredientName": "Oregano"
+      },
+      {
+        "ingredientID": 21,
+        "ingredientName": "Basil"
+      },
+      {
+        "ingredientID": 22,
+        "ingredientName": "Eggplants"
+      },
+      {
+        "ingredientID": 23,
+        "ingredientName": "Potato slices"
+      },
+      {
+        "ingredientID": 24,
+        "ingredientName": "Truffle"
+      },
+      {
+        "ingredientID": 25,
+        "ingredientName": "Parsley"
+      },
+      {
+        "ingredientID": 26,
+        "ingredientName": "Shrimps"
+      }
+    ]
   },
   {
     "PizzaID": 6,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Hawaii Pizza",
+    "Price": 7.00,
+    "PizzaIngredients": [
+
+      {
+        "ingredientID": 4,
+        "ingredientName": "Ham"
+      },
+      {
+        "ingredientID": 3,
+        "ingredientName": "Pineapple"
+      },
+      {
+        "ingredientID": 1,
+        "ingredientName": "Cheese"
+      }
+    ]
   },
   {
     "PizzaID": 7,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Margherita Pizza",
+    "Price": 6.00,
+    "PizzaIngredients": [
+
+      {
+        "ingredientID": 1,
+        "ingredientName": "Cheese"
+      }
+    ]
   },
   {
     "PizzaID": 8,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Salami Pizza",
+    "Price": 7.00,
+    "PizzaIngredients": [
+
+      {
+        "ingredientID": 33,
+        "ingredientName": "Salami"
+      },
+      {
+        "ingredientID": 1,
+        "ingredientName": "Cheese"
+      }
+    ]
   },
   {
     "PizzaID": 9,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Bueffel Pizza",
+    "Price": 9.00,
+    "PizzaIngredients": [
+
+      {
+        "ingredientID": 31,
+        "ingredientName": "Buffalo mozzarella"
+      },
+      {
+        "ingredientID": 20,
+        "ingredientName": "Oregano"
+      },
+      {
+        "ingredientID": 21,
+        "ingredientName": "Basil"
+      },
+      {
+        "ingredientID": 1,
+        "ingredientName": "Cheese"
+      }
+    ]
   },
   {
     "PizzaID": 10,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Tomaten Pizza",
+    "Price": 7.00,
+    "PizzaIngredients": [
+
+      {
+        "ingredientID": 0,
+        "ingredientName": "Tomato"
+      },
+      {
+        "ingredientID": 1,
+        "ingredientName": "Cheese"
+      }
+    ]
   },
   {
     "PizzaID": 11,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Mais Pizza",
+    "Price": 7.00,
+    "PizzaIngredients": [
+
+      {
+        "ingredientID": 1,
+        "ingredientName": "Cheese"
+      },
+      {
+        "ingredientID": 17,
+        "ingredientName": "Corn"
+      }
+    ]
   },
   {
     "PizzaID": 12,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Pilze Pizza",
+    "Price": 6.00,
+    "PizzaIngredients": [
+
+      {
+        "ingredientID": 1,
+        "ingredientName": "Cheese"
+      },
+      {
+        "ingredientID": 14,
+        "ingredientName": "Champignons"
+      }
+    ]
   },
   {
     "PizzaID": 13,
     "LevelOfSpice": 0,
-    "PizzaName": "empty",
-    "Price": 0,
-    "PizzaIngredients": []
+    "PizzaName": "Krabben Pizza",
+    "Price": 8.00,
+    "PizzaIngredients": [
+
+      {
+        "ingredientID": 19,
+        "ingredientName": "Spinach"
+      },
+      {
+        "ingredientID": 20,
+        "ingredientName": "Oregano"
+      },
+      {
+        "ingredientID": 21,
+        "ingredientName": "Basil"
+      },
+      {
+        "ingredientID": 22,
+        "ingredientName": "Eggplants"
+      },
+      {
+        "ingredientID": 0,
+        "ingredientName": "Tomato"
+      },
+      {
+        "ingredientID": 1,
+        "ingredientName": "Cheese"
+      },
+      {
+        "ingredientID": 25,
+        "ingredientName": "Parsley"
+      },
+      {
+        "ingredientID": 26,
+        "ingredientName": "Shrimps"
+      }
+    ]
   }
 ]

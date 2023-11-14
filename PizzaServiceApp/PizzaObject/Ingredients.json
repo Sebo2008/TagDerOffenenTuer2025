@@ -126,5 +126,13 @@
   {
     "ingredientID": 31,
     "ingredientName": "Buffalo mozzarella"
+  },
+  {
+    "ingredientID": 32,
+    "ingredientName": "Chili"
+  },
+  {
+    "ingredientID": 33,
+    "ingredientName": "Salami"
   }
 ]
