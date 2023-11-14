@@ -9,16 +9,12 @@ namespace PizzaServiceApp
 {
     public class Discounts
     {
-        public static int currentDiscount { get; set; } = 0;
-        public static double currentTotalPrice { get; set; } = 0;
+        public static int currentDiscount { get; set; }
+        public static double currentTotalPrice { get; set; }
         public static List<string> cuponCodes = new();
         public static void InitializeCuponCodes()
         {
-            cuponCodes = new(File.ReadAllLines("PizzaObject/DiscountCodes.txt"));
-            foreach (string code in new List<string>(cuponCodes))
-            {
-                cuponCodes.Add(code);
-            }
+            Discounts.cuponCodes = new(File.ReadAllLines("PizzaObject/DiscountCodes.txt"));
         }
         public static void CheckCode(string userInput)
         {
@@ -27,26 +23,32 @@ namespace PizzaServiceApp
                 if (userInput.Equals(code[2..]))
                 {
                     currentDiscount = Convert.ToInt32(code[..2]);
+                    break;
+                }
+                else
+                {
+                    currentDiscount = 0;
                 }
             }
+            CalculateTotalPrice();
         }
         public static void CalculateTotalPrice()
         {
+            currentTotalPrice = 0;
             foreach (PizzaObject.PizzaObject orderedPizza in Order.orderList)
             {
                 int orderedPizzaDefaultIngredientCount;
                 foreach (PizzaObject.PizzaObject pizzaObject in PizzaObject.PizzaObject.StandartPizzas)
                 {
+                    orderedPizzaDefaultIngredientCount = pizzaObject.PizzaIngredients.Count();
                     if (pizzaObject.PizzaID == orderedPizza.PizzaID)
                     {
-                        orderedPizzaDefaultIngredientCount = pizzaObject.PizzaIngredients.Count();
-                        orderedPizza.Price += (orderedPizza.PizzaIngredients.Count - orderedPizzaDefaultIngredientCount);
-                        break;
+                        currentTotalPrice += (orderedPizza.PizzaIngredients.Count - orderedPizzaDefaultIngredientCount) * 0.75;
                     }
                 }
                 currentTotalPrice += orderedPizza.Price;
             }
-            currentTotalPrice -= currentTotalPrice / 100 * currentDiscount;
+            currentTotalPrice -= currentTotalPrice * currentDiscount / 100;
         }
     }
 }

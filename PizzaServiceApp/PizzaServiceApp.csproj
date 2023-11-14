@@ -13,6 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="PizzaObject\DiscountCodes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="PizzaObject\Ingredients.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

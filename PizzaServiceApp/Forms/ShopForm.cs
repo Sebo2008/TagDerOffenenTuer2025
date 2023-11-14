@@ -15,11 +15,16 @@ namespace PizzaServiceApp.Forms
         public ShopForm()
         {
             InitializeComponent();
+            Discounts.InitializeCuponCodes();
+            Discounts.CalculateTotalPrice();
+            label1.Text = Discounts.currentTotalPrice.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Discounts.CheckCode(textBox1.Text.ToString());
+            Discounts.CalculateTotalPrice();
+            label1.Text = Discounts.currentTotalPrice.ToString();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -29,12 +34,11 @@ namespace PizzaServiceApp.Forms
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
         }
 
         private void PizzaListe_TextChanged(object sender, EventArgs e)
