@@ -23,7 +23,7 @@ namespace PizzaServiceApp
         {
             InitializeComponent();
             IngredientObject.IngredientsJson();
-
+            Discounts.InitializeCuponCodes();
             PizzaObject.PizzaObject.PizzasJson();
 
             foreach (var item in PizzaObject.PizzaObject.standartPizzasHashSet)
