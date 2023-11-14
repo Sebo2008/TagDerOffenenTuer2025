@@ -29,7 +29,7 @@ namespace PizzaServiceApp.Forms
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            Discounts.CheckCode(Convert.ToString(textBox1.Text));
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace PizzaServiceApp.Forms
 
         private void PizzaListe_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
