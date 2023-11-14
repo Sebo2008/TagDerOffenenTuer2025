@@ -9,6 +9,8 @@ namespace PizzaServiceApp
 {
     public class Discounts
     {
+        public static int currentDiscount { get; set; } = 0;
+        public static double currentTotalPrice { get; set; } = 0;
         public static List<string> cuponCodes = new();
         public static void InitializeCuponCodes()
         {
@@ -24,18 +26,17 @@ namespace PizzaServiceApp
             {
                 if (userInput.Equals(code[2..]))
                 {
-                    CalculateTotalPrice(Convert.ToInt32(code[..2]));
+                    currentDiscount = Convert.ToInt32(code[..2]);
                 }
             }
         }
-        public static double CalculateTotalPrice(int discount)
+        public static void CalculateTotalPrice()
         {
-            double totalPrice = 0;
             foreach (PizzaObject.PizzaObject orderedPizza in Order.orderList)
             {
-                totalPrice = +orderedPizza.Price;
+                currentTotalPrice += orderedPizza.Price;
             }
-            return totalPrice - totalPrice / 100 * discount;
+            currentTotalPrice -= currentTotalPrice / 100 * currentDiscount;
         }
     }
 }
