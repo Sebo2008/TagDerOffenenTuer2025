@@ -41,6 +41,14 @@ namespace PizzaServiceApp.PizzaObject
             }
             Order.orderList.Add(new PizzaObject(-1, LevelOfSpice, StandartPizzaName, price, OrderIngredients));
         }
-
+        public static double ContinueToCheckout(int discount)
+        {
+            double totalPrice = 0;
+            foreach (PizzaObject orderedPizza in Order.orderList)
+            {
+                totalPrice =+ orderedPizza.Price;
+            }
+            return totalPrice - totalPrice / 100 * discount;
+        }
     }
 }
