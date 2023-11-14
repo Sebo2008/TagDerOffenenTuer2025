@@ -1,4 +1,6 @@
+using PizzaServiceApp.Forms;
 using PizzaServiceApp.PizzaObject;
+using System.Drawing;
 
 namespace PizzaServiceApp
 {
@@ -12,6 +14,8 @@ namespace PizzaServiceApp
         public List<string> list { get; set; } = new();
 
         public bool cheese { get; set; }
+
+        public ShopForm ShopForm { get; set; }
 
 
         public Form1()
@@ -38,12 +42,11 @@ namespace PizzaServiceApp
 
         private void order_Click(object sender, EventArgs e)
         {
-            this.ShowDialog();
+            this.ShopForm = new ShopForm();
+            this.ShopForm.ShowDialog();
         }
-
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
