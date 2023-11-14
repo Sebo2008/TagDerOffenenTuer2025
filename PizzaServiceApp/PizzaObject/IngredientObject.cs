@@ -16,12 +16,10 @@ namespace PizzaServiceApp.PizzaObject
     {
         public int ingredientID { get; set; }
         public string ingredientName { get; set; }
-        public bool isOnPizza { get; set; }
-        IngredientObject(int id, string name, bool isOnPizza)
+        IngredientObject(int id, string name)
         {
             this.ingredientID = id;
             this.ingredientName = name;
-            this.isOnPizza = isOnPizza;
         }
         IngredientObject() { }
         public static List<IngredientObject> ?StandartIngredients = new();
