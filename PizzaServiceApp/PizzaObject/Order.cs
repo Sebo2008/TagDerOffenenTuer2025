@@ -27,6 +27,10 @@ namespace PizzaServiceApp.PizzaObject
                     }
                 }
             }
+            foreach (PizzaObject standartPizza in PizzaObject.StandartPizzas)
+            {
+
+            }
         }
 
     }

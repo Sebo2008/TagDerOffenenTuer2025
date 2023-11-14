@@ -27,7 +27,7 @@ namespace PizzaServiceApp.PizzaObject
             this.Price = price;
             this.PizzaIngredients = ingredients;
         }
-        static List<PizzaObject> StandartPizzas = new List<PizzaObject>();
+        internal static List<PizzaObject> StandartPizzas = new List<PizzaObject>();
         public static void PizzasJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
