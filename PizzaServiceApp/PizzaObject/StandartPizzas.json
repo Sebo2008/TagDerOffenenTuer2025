@@ -1,0 +1,100 @@
+[
+  {
+    "PizzaID": 0,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  },
+  {
+    "PizzaID": 1,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  },
+  {
+    "PizzaID": 2,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  },
+  {
+    "PizzaID": 3,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  },
+  {
+    "PizzaID": 4,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  },
+  {
+    "PizzaID": 5,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  },
+  {
+    "PizzaID": 6,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  },
+  {
+    "PizzaID": 7,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  },
+  {
+    "PizzaID": 8,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  },
+  {
+    "PizzaID": 9,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  },
+  {
+    "PizzaID": 10,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  },
+  {
+    "PizzaID": 11,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  },
+  {
+    "PizzaID": 12,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  },
+  {
+    "PizzaID": 13,
+    "LevelOfSpice": 0,
+    "PizzaName": "empty",
+    "Price": 0,
+    "PizzaIngredients": []
+  }
+]

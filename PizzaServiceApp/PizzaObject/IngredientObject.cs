@@ -26,14 +26,14 @@ namespace PizzaServiceApp.PizzaObject
         public static void IngredientsJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
-            StandartIngredients = JsonConvert.DeserializeObject<List<IngredientObject>>(File.ReadAllText("Ingredients.json"));
+            StandartIngredients = JsonConvert.DeserializeObject<List<IngredientObject>>(File.ReadAllText("PizzaObject/Ingredients.json"));
             foreach (var ingredient in IngredientObject.StandartIngredients.Select((value, i) => new { i, value }))
             {
                 var value = ingredient.value;
                 var index = ingredient.i;
                 ingredient.value.ingredientID = index;
             }
-            File.WriteAllText("Ingredients.json", System.Text.Json.JsonSerializer.Serialize(IngredientObject.StandartIngredients, options));
+            File.WriteAllText("PizzaObject/Ingredients.json", System.Text.Json.JsonSerializer.Serialize(IngredientObject.StandartIngredients, options));
         }
     }
 }

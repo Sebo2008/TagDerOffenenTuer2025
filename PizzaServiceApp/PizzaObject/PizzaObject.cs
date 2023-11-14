@@ -28,18 +28,19 @@ namespace PizzaServiceApp.PizzaObject
             this.PizzaIngredients = ingredients;
         }
         public static List<PizzaObject> StandartPizzas = new List<PizzaObject>();
+        internal static readonly HashSet<string> standartPizzasHashSet;
         public static void PizzasJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
-            StandartPizzas = JsonConvert.DeserializeObject<List<PizzaObject>>(File.ReadAllText("StandartPizzas.json"))!;
+            StandartPizzas = JsonConvert.DeserializeObject<List<PizzaObject>>(File.ReadAllText("PizzaObject/StandartPizzas.json"))!;
             foreach (var standartPizza in StandartPizzas.Select((value, i) => new { i, value }))
             {
                 var value = standartPizza.value;
                 var index = standartPizza.i;
                 standartPizza.value.PizzaID = index;
+                standartPizzasHashSet.Add(standartPizza.value.PizzaName);
             }
-            File.WriteAllText("StandartPizzas.json", System.Text.Json.JsonSerializer.Serialize(StandartPizzas, options));
+            File.WriteAllText("PizzaObject/StandartPizzas.json", System.Text.Json.JsonSerializer.Serialize(StandartPizzas, options));
         }
-        internal static readonly HashSet<string> standartPizzasHashSet = File.ReadAllLines("PizzaObject/standartPizzasList.txt").ToHashSet();
     }
 }
