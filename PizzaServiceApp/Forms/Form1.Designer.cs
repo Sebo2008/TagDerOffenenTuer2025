@@ -66,7 +66,7 @@
             cmb_pizza.Size = new Size(121, 23);
             cmb_pizza.TabIndex = 2;
             cmb_pizza.Tag = "";
-            cmb_pizza.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cmb_pizza.SelectedIndexChanged += cmb_pizza_SelectedIndexChanged;
             // 
             // tb_Schaerfe
             // 

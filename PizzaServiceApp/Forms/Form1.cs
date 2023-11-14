@@ -10,12 +10,10 @@ namespace PizzaServiceApp
 
 
     {
-        public PizzaObject.PizzaObject Pizza { get; set; }
-        public PizzaObject.PizzaObject Pizzaadded { get; set; }
+       
         public List<string> list { get; set; } = new();
 
-        public bool cheese { get; set; }
-
+   
         public ShopForm ShopForm { get; set; }
 
 
@@ -62,11 +60,23 @@ namespace PizzaServiceApp
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmb_pizza_SelectedIndexChanged(object sender, EventArgs e)
         {
+            List<int> checkedIngredientsIDs = new();
+            var listeDerPizzen = PizzaObject.PizzaObject.StandartPizzas;
+            cmb_pizza.SelectedItem = listeDerPizzen;
 
-
-
+            foreach (PizzaObject.PizzaObject standartPizza in PizzaObject.PizzaObject.StandartPizzas)
+            {
+                if (cmb_pizza.SelectedIndex == standartPizza.PizzaID)
+                {
+                    foreach (IngredientObject standartIngredient in standartPizza.PizzaIngredients)
+                    {
+                        checkedIngredientsIDs.Add(standartIngredient.ingredientID);
+                    }
+                }
+            }
+            //checkedListBox1.
         }
 
         private void add_pizza_Click(object sender, EventArgs e)
