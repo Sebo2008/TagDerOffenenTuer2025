@@ -31,7 +31,7 @@
             Order = new Button();
             button1 = new Button();
             textBox1 = new TextBox();
-            PizzaListe = new TextBox();
+            PizzasAufgelistet = new TextBox();
             SuspendLayout();
             // 
             // Order
@@ -48,9 +48,9 @@
             // button1
             // 
             button1.BackColor = Color.CornflowerBlue;
-            button1.Location = new Point(604, 187);
+            button1.Location = new Point(604, 153);
             button1.Name = "button1";
-            button1.Size = new Size(184, 70);
+            button1.Size = new Size(184, 78);
             button1.TabIndex = 1;
             button1.Text = "Enter Coupon Code";
             button1.UseVisualStyleBackColor = false;
@@ -65,21 +65,21 @@
             textBox1.TabIndex = 2;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // PizzaListe
+            // PizzasAufgelistet
             // 
-            PizzaListe.Location = new Point(45, -1);
-            PizzaListe.Multiline = true;
-            PizzaListe.Name = "PizzaListe";
-            PizzaListe.Size = new Size(397, 458);
-            PizzaListe.TabIndex = 3;
-            PizzaListe.TextChanged += PizzaListe_TextChanged;
+            PizzasAufgelistet.Location = new Point(26, 0);
+            PizzasAufgelistet.Multiline = true;
+            PizzasAufgelistet.Name = "PizzasAufgelistet";
+            PizzasAufgelistet.Size = new Size(397, 458);
+            PizzasAufgelistet.TabIndex = 3;
+            PizzasAufgelistet.TextChanged += PizzaListe_TextChanged;
             // 
             // ShopForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(796, 458);
-            Controls.Add(PizzaListe);
+            Controls.Add(PizzasAufgelistet);
             Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(Order);
@@ -95,6 +95,6 @@
         private Button Order;
         private Button button1;
         private TextBox textBox1;
-        private TextBox PizzaListe;
+        private TextBox PizzasAufgelistet;
     }
 }
