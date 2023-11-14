@@ -1,6 +1,7 @@
 using PizzaServiceApp.Forms;
 using PizzaServiceApp.PizzaObject;
 using System.Drawing;
+using static System.Windows.Forms.AxHost;
 
 namespace PizzaServiceApp
 {
@@ -76,8 +77,8 @@ namespace PizzaServiceApp
             }
 
             MessageBox.Show($"You added {cmb_pizza.SelectedItem} with {extrasString.Trim()}. Level of Spicy: {tb_Schaerfe.Value} to your ordering list");
-            
-            PizzaObject.Order.AddPizzaToOrder( Convert.ToString(cmb_pizza.SelectedItem),Convert.ToInt32(tb_Schaerfe.Value), checkedListBox1.CheckedItems.OfType<string>().ToList());
+
+            PizzaObject.Order.AddPizzaToOrder(Convert.ToString(cmb_pizza.SelectedItem), Convert.ToInt32(tb_Schaerfe.Value), checkedListBox1.CheckedItems.OfType<string>().ToList());
 
             this.list.Add((string)cmb_pizza.SelectedItem);
             foreach (var item in list)
@@ -86,16 +87,18 @@ namespace PizzaServiceApp
             }
 
             this.list.Clear();
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemCheckState(i, CheckState.Unchecked);
+            }
         }
-
-
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
 
