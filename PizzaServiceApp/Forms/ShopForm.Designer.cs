@@ -32,6 +32,7 @@
             button1 = new Button();
             textBox1 = new TextBox();
             PizzasAufgelistet = new TextBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // Order
@@ -74,11 +75,22 @@
             PizzasAufgelistet.TabIndex = 3;
             PizzasAufgelistet.TextChanged += PizzaListe_TextChanged;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(660, 337);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 4;
+            label1.Text = "label1";
+            label1.Click += label1_Click;
+            // 
             // ShopForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(796, 458);
+            Controls.Add(label1);
             Controls.Add(PizzasAufgelistet);
             Controls.Add(textBox1);
             Controls.Add(button1);
@@ -96,5 +108,6 @@
         private Button button1;
         private TextBox textBox1;
         private TextBox PizzasAufgelistet;
+        private Label label1;
     }
 }
