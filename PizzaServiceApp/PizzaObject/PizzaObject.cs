@@ -27,8 +27,8 @@ namespace PizzaServiceApp.PizzaObject
             this.Price = price;
             this.PizzaIngredients = ingredients;
         }
-        public static List<PizzaObject> StandartPizzas = new List<PizzaObject>();
-        internal static readonly HashSet<string> standartPizzasHashSet;
+        public static List<PizzaObject> StandartPizzas = new();
+        internal static readonly HashSet<string> standartPizzasHashSet = new();
         public static void PizzasJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
@@ -38,7 +38,7 @@ namespace PizzaServiceApp.PizzaObject
                 var value = standartPizza.value;
                 var index = standartPizza.i;
                 standartPizza.value.PizzaID = index;
-                standartPizzasHashSet.Add(standartPizza.value.PizzaName);
+                PizzaObject.standartPizzasHashSet.Add(standartPizza.value.PizzaName);
             }
             File.WriteAllText("PizzaObject/StandartPizzas.json", System.Text.Json.JsonSerializer.Serialize(StandartPizzas, options));
         }
