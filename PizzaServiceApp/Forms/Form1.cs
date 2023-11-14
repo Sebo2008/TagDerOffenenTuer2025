@@ -35,12 +35,14 @@ namespace PizzaServiceApp
 
             foreach (var item in IngredientObject.StandartIngredients)
             {
+                
                 checkedListBox1.Items.Add(item.ingredientName);
+
             }
 
             cmb_pizza.SelectedIndex = 0;
         }
-
+        
         private void order_Click(object sender, EventArgs e)
         {
             this.ShopForm = new ShopForm();
