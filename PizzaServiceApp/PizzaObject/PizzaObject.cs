@@ -19,7 +19,7 @@ namespace PizzaServiceApp.PizzaObject
         public double Price { get; set; }
         public List<IngredientObject> PizzaIngredients { get; set; }
 
-        PizzaObject(int pizzaID, int levelOfSpice, string pizzaName, double price, List<IngredientObject> ingredients)
+        public PizzaObject(int pizzaID, int levelOfSpice, string pizzaName, double price, List<IngredientObject> ingredients)
         {
             this.PizzaID = pizzaID;
             this.LevelOfSpice = levelOfSpice;
@@ -27,11 +27,11 @@ namespace PizzaServiceApp.PizzaObject
             this.Price = price;
             this.PizzaIngredients = ingredients;
         }
-        internal static List<PizzaObject> StandartPizzas = new List<PizzaObject>();
+        public static List<PizzaObject> StandartPizzas = new List<PizzaObject>();
         public static void PizzasJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
-            StandartPizzas = JsonConvert.DeserializeObject<List<PizzaObject>>(File.ReadAllText("StandartPizzas.json"));
+            StandartPizzas = JsonConvert.DeserializeObject<List<PizzaObject>>(File.ReadAllText("StandartPizzas.json"))!;
             foreach (var standartPizza in StandartPizzas.Select((value, i) => new { i, value }))
             {
                 var value = standartPizza.value;
