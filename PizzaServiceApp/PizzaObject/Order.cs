@@ -14,15 +14,16 @@ namespace PizzaServiceApp.PizzaObject
         {
 
         }
-        public static void AddPizzaToOrder(Collection<string> checkedExtras)
+        public static void AddPizzaToOrder(string StandartPizzaName, int LevelOfSpice, ICollection<string> CheckedExtras)
         {
-            foreach (string extra in checkedExtras)
+            List<IngredientObject> OrderIngredients = new();
+            foreach (string extra in CheckedExtras)
             {
                 foreach (IngredientObject ingredient in IngredientObject.StandartIngredients)
                 {
                     if (extra.Equals(ingredient.ingredientName))
                     {
-                        
+                        OrderIngredients.Add(ingredient);
                     }
                 }
             }

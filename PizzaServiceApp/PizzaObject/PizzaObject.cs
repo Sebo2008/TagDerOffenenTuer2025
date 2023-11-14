@@ -7,6 +7,7 @@ using System.Text.Json;
 using PizzaServiceApp.PizzaObject;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using Newtonsoft.Json;
 
 namespace PizzaServiceApp.PizzaObject
 {
@@ -26,10 +27,18 @@ namespace PizzaServiceApp.PizzaObject
             this.Price = price;
             this.PizzaIngredients = ingredients;
         }
+        static List<PizzaObject> StandartPizzas = new List<PizzaObject>();
         public static void PizzasJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
-            File.WriteAllText("StandartPizzas.json", JsonSerializer.Serialize(new PizzaObject(0, 0, "empty", 0.00, IngredientObject.StandartIngredients), options));
+            StandartPizzas = JsonConvert.DeserializeObject<List<PizzaObject>>(File.ReadAllText("StandartPizzas.json"));
+            foreach (var standartPizza in StandartPizzas.Select((value, i) => new { i, value }))
+            {
+                var value = standartPizza.value;
+                var index = standartPizza.i;
+                standartPizza.value.PizzaID = index;
+            }
+            File.WriteAllText("StandartPizzas.json", System.Text.Json.JsonSerializer.Serialize(StandartPizzas, options));
         }
         internal static readonly HashSet<string> standartPizzasHashSet = File.ReadAllLines("PizzaObject/standartPizzasList.txt").ToHashSet();
     }
