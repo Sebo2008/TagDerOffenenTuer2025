@@ -19,9 +19,6 @@
     <None Update="PizzaObject\StandartPizzas.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="PizzaObject\standartPizzasList.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
