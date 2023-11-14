@@ -34,6 +34,16 @@ namespace PizzaServiceApp
         {
             foreach (PizzaObject.PizzaObject orderedPizza in Order.orderList)
             {
+                int orderedPizzaDefaultIngredientCount;
+                foreach (PizzaObject.PizzaObject pizzaObject in PizzaObject.PizzaObject.StandartPizzas)
+                {
+                    if (pizzaObject.PizzaID == orderedPizza.PizzaID)
+                    {
+                        orderedPizzaDefaultIngredientCount = pizzaObject.PizzaIngredients.Count();
+                        orderedPizza.Price += (orderedPizza.PizzaIngredients.Count - orderedPizzaDefaultIngredientCount);
+                        break;
+                    }
+                }
                 currentTotalPrice += orderedPizza.Price;
             }
             currentTotalPrice -= currentTotalPrice / 100 * currentDiscount;

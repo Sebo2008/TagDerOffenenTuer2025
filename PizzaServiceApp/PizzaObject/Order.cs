@@ -17,7 +17,8 @@ namespace PizzaServiceApp.PizzaObject
         public static void AddPizzaToOrder(string StandartPizzaName, int LevelOfSpice, ICollection<string> CheckedExtras)
         {
             List<IngredientObject> OrderIngredients = new();
-            double price = 10.00;
+            double price = 6;
+            int id = 7;
             foreach (PizzaObject standartPizza in PizzaObject.StandartPizzas)
             {
                 if (standartPizza.PizzaName.Equals(StandartPizzaName))
@@ -27,6 +28,7 @@ namespace PizzaServiceApp.PizzaObject
                         OrderIngredients.Add(standartPizzaIngredient);
                     }
                     price = standartPizza.Price;
+                    id = standartPizza.PizzaID;
                 }
             }
             foreach (string extra in CheckedExtras)
@@ -39,7 +41,7 @@ namespace PizzaServiceApp.PizzaObject
                     }
                 }
             }
-            Order.orderList.Add(new PizzaObject(-1, LevelOfSpice, StandartPizzaName, price, OrderIngredients));
+            Order.orderList.Add(new PizzaObject(id, LevelOfSpice, StandartPizzaName, price, OrderIngredients));
         }
     }
 }
