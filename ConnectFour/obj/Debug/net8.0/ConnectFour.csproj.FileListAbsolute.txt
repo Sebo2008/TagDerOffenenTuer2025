@@ -1,0 +1,15 @@
+C:\Users\Sebo\source\repos\ConnectFour\bin\Debug\net8.0\ConnectFour.exe
+C:\Users\Sebo\source\repos\ConnectFour\bin\Debug\net8.0\ConnectFour.deps.json
+C:\Users\Sebo\source\repos\ConnectFour\bin\Debug\net8.0\ConnectFour.runtimeconfig.json
+C:\Users\Sebo\source\repos\ConnectFour\bin\Debug\net8.0\ConnectFour.dll
+C:\Users\Sebo\source\repos\ConnectFour\bin\Debug\net8.0\ConnectFour.pdb
+C:\Users\Sebo\source\repos\ConnectFour\obj\Debug\net8.0\ConnectFour.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sebo\source\repos\ConnectFour\obj\Debug\net8.0\ConnectFour.AssemblyInfoInputs.cache
+C:\Users\Sebo\source\repos\ConnectFour\obj\Debug\net8.0\ConnectFour.AssemblyInfo.cs
+C:\Users\Sebo\source\repos\ConnectFour\obj\Debug\net8.0\ConnectFour.csproj.CoreCompileInputs.cache
+C:\Users\Sebo\source\repos\ConnectFour\obj\Debug\net8.0\ConnectFour.sourcelink.json
+C:\Users\Sebo\source\repos\ConnectFour\obj\Debug\net8.0\ConnectFour.dll
+C:\Users\Sebo\source\repos\ConnectFour\obj\Debug\net8.0\refint\ConnectFour.dll
+C:\Users\Sebo\source\repos\ConnectFour\obj\Debug\net8.0\ConnectFour.pdb
+C:\Users\Sebo\source\repos\ConnectFour\obj\Debug\net8.0\ConnectFour.genruntimeconfig.cache
+C:\Users\Sebo\source\repos\ConnectFour\obj\Debug\net8.0\ref\ConnectFour.dll
